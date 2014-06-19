@@ -9,7 +9,7 @@ befor_install:
 
 install:
  - travis_retry cabal update
- - cabal install hspec doctest cabal-src hpc-coveralls --avoid-reinstalls
+ - cabal install hspec doctest cabal-src hpc-coveralls --force-reinstalls
  - cabal install --only-dependencies --enable-tests
 
 script:

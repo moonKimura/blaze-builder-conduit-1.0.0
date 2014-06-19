@@ -3,7 +3,7 @@ language: haskell
 befor_install:
  - cabal update
  - cabal install hspec doctest cabal-src
- - cabal install hpc-coveralls
+ - cabal install hpc-coveralls --avoid-reinstalls
  - cabal install --only-dependencies --enable-tests
 
 script:

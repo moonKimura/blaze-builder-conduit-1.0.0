@@ -2,12 +2,11 @@ language: haskell
 
 befor_install:
  - cabal update
- - cabal install hspec doctest cabal-meta cabal-src
- - cabal-meta install --force-reinstalls
+ - cabal install hspec doctest cabal-src
  - cabal install hpc-coveralls
+ - cabal install --only-dependencies --enable-tests
 
 script:
- - mega-sdist --test
  - cabal configure --enable-tests --enable-library-coverage
  - cabal build
  - /home/travis/.cabal/run-cabal-test --show-details=always

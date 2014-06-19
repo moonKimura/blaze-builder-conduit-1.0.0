@@ -9,8 +9,8 @@ befor_install:
 
 install:
  - travis_retry cabal update
- - cabal install aeson hpc-coveralls scientific attoparsec --force-reinstalls
  - cabal install --only-dependencies --enable-tests
+ - cabal install aeson hpc-coveralls scientific attoparsec --force-reinstalls
 
 script:
  - cabal configure --enable-tests --enable-library-coverage

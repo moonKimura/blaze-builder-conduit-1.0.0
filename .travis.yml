@@ -1,5 +1,7 @@
 language: haskell
 
+ghc: 7.8.2
+
 befor_install:
  - cabal update
  - cabal install hspec doctest cabal-src

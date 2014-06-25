@@ -18,4 +18,5 @@ script:
  - run-cabal-test --show-details=always
 
 after_script:
- - hpc-coveralls dist/hpc/mix/blaze-builder-conduit-1.0.0/test
+ - ln -s dist/hpc/mix/blaze-builder-conduit-1.0.0 ./dist/hpc/mix/text
+ - hpc-coveralls test

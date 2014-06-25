@@ -10,7 +10,7 @@ befor_install:
 install:
  - travis_retry cabal update
  - cabal install --only-dependencies --enable-tests
- - cabal install hpc-coveralls --force-reinstalls
+ - cabal install hpc-coveralls scientific attoparsec --force-reinstalls
 
 script:
  - cabal configure --enable-tests --enable-library-coverage
